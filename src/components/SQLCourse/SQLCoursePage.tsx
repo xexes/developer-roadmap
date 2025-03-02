@@ -1,5 +1,4 @@
 import {
-  ArrowRightIcon,
   ArrowUpDownIcon,
   BarChartIcon,
   BrainIcon,
@@ -15,18 +14,21 @@ import {
   TableIcon,
   WrenchIcon,
 } from 'lucide-react';
+import { RoadmapLogoIcon } from '../ReactIcons/RoadmapLogo';
+import { AccountButton } from './AccountButton';
+import { AuthorCredentials } from './AuthorCredentials';
+import { AuthorQuoteMessage } from './AuthorQuoteMessage';
+import { BuyButton } from './BuyButton';
 import { ChapterRow } from './ChapterRow';
+import { CourseAuthor } from './CourseAuthor';
 import { CourseFeature } from './CourseFeature';
+import { FAQSection } from './FAQSection';
+import { FloatingPurchase } from './FloatingPurchase';
+import { PlatformDemo } from './PlatformDemo';
+import { ReviewsSection } from './ReviewsSection';
 import { SectionHeader } from './SectionHeader';
 import { Spotlight } from './Spotlight';
-import { FloatingPurchase } from './FloatingPurchase';
-import { CourseAuthor } from './CourseAuthor';
-import { FAQSection } from './FAQSection';
-import { BuyButton } from './BuyButton';
-import { AccountButton } from './AccountButton';
-import { RoadmapLogoIcon } from '../ReactIcons/RoadmapLogo';
-import { PlatformDemo } from './PlatformDemo';
-import { AuthorQuoteMessage } from './AuthorQuoteMessage';
+
 type ChapterData = {
   icon: React.ReactNode;
   title: string;
@@ -254,8 +256,9 @@ export function SQLCoursePage() {
         </a>
         <AccountButton />
       </div>
-      <div className="relative mt-7 max-w-3xl text-left md:mt-20 md:text-center">
+      <div className="relative mt-7 max-w-4xl text-left md:mt-20 md:text-center">
         <Spotlight className="left-[-170px] top-[-200px]" fill="#EAB308" />
+
         <div className="inline-block rounded-full bg-yellow-500/10 px-4 py-1.5 text-base text-yellow-500 md:px-6 md:py-2 md:text-lg">
           <span className="hidden sm:block">
             Complete Course to Master Practical SQL
@@ -270,6 +273,7 @@ export function SQLCoursePage() {
           </div>
         </h1>
 
+        <AuthorCredentials />
         <p className="mx-auto my-5 max-w-2xl text-xl text-zinc-300 md:my-12 lg:text-2xl">
           A structured course to master database querying - perfect for
           developers, data analysts, and anyone working with data.
@@ -299,14 +303,16 @@ export function SQLCoursePage() {
         </div>
       </div>
 
-      <AuthorQuoteMessage />
+      <ReviewsSection />
 
       <PlatformDemo />
+
+      <AuthorQuoteMessage />
 
       <SectionHeader
         title="Not your average SQL course"
         description="Built around a text-based interactive approach and packed with practical challenges, this course stands out with features that make it truly unique."
-        className="mt-16 md:mt-32"
+        className="mt-16 md:mt-20"
       />
 
       <div className="mx-auto mt-6 w-full max-w-5xl md:mt-10">
